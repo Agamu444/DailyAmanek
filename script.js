@@ -1,21 +1,21 @@
-document.getElementById("losujBtn").addEventListener("click", startGifLoop);
+document.getElementById("losujBtn").addEventListener("click", startImageLoop);
 
-const gifs = [
-    "https://media.giphy.com/media/1yK1mMi3ikV2w/giphy.gif",
-    "https://media.giphy.com/media/l4Kib5p0R9t04LJYs/giphy.gif",
-    "https://media.giphy.com/media/3o6Zt7gCRnWv4rLPAI/giphy.gif",
-    "https://media.giphy.com/media/26uf6lBxaRiA4jlE0/giphy.gif",
-    "https://media.giphy.com/media/26gs0I0ayp8aVlw7W/giphy.gif"
+const images = [
+    "https://example.com/images/image1.png",
+    "https://example.com/images/image2.png",
+    "https://example.com/images/image3.png",
+    "https://example.com/images/image4.png",
+    "https://example.com/images/image5.png"
 ];
 
-function startGifLoop() {
-    const gifElement = document.getElementById("gif");
+function startImageLoop() {
+    const imageElement = document.getElementById("image");
 
     let counter = 0;
 
     const interval = setInterval(() => {
-        gifElement.src = gifs[counter];
-        counter = (counter + 1) % gifs.length;
+        imageElement.src = images[counter];
+        counter = (counter + 1) % images.length;
     }, 100);
 
     setTimeout(() => {
