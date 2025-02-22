@@ -27,13 +27,13 @@ button:hover {
     background-color: #45a049;
 }
 
-.gif-container {
+.image-container {
     max-width: 400px;
     max-height: 400px;
     margin-top: 20px;
 }
 
-#gif {
+#image {
     width: 100%;
     height: auto;
     border-radius: 10px;
