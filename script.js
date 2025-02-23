@@ -24,12 +24,15 @@ function startImageLoop() {
 
     let counter = 0;
 
+    // Generujemy losowy czas trwania (w milisekundach) między 2 a 10 sekund
+    const randomDuration = Math.floor(Math.random() * 8000) + 2000; // Losowy czas między 2000 a 10000ms (2-10 sekund)
+
     const interval = setInterval(() => {
         imageElement.src = images[counter];
-        counter = (counter + 1) % images.length;
-    }, 100);
+        counter = (counter + 1) % images.length; // Wraca do początku, gdy dojdzie do końca tablicy
+    }, 100); // Zmiana obrazu co 100ms
 
     setTimeout(() => {
-        clearInterval(interval);
-    }, 5000); // Po 5 sekundach zatrzymuje losowanie
+        clearInterval(interval); // Zatrzymuje interwał po losowym czasie
+    }, randomDuration); // Czas trwania losowania jest teraz losowy
 }
